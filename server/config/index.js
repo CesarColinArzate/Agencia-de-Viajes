@@ -1,8 +1,11 @@
 module.exports = {
+  
     development: {
-        nombresitio : 'Desarrollo - Agencia de Viajes'
+        nombresitio: 'Agencia de Viajes [Desarrollo]'
     },
+
     production: {
-        nombresitio : 'Agencia de Viajes'
-    }
+        nombresitio: 'Agencia de Viajes'
+    },
+
 }

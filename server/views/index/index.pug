@@ -1,32 +1,16 @@
-extends ../layout/index
+extends ../masterpage/index
+
 block slider
     .slider
         h1 Rio de Janeiro
-        em Aventura
-
+        em aventura
 block contenido
-    main.container.mt-5
-        h2.text-center.mb-5 Sobre Nosotros
-        .row.mb-5
-            .col-md-6
-                p Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-
-                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            .col-md-6
-                img(src='/img/inicio_nosotros.jpg', class='img-fluid')
-        
-        h2.text-center.mb-5 Próximos Viajes
-        include ../layout/partials/viajes
-        
-    .descuento
+    .descuento 
         .container
             .row
                 .col-md-6
                     .contenido
                         h3 5% de Descuento
-                        p.titulo Viaje a Canada
-                        p.fecha Del 20 al 29 de Agosto del 2020
-                        p.precio $2,500 USD}
-    .container
-        h2.text-center.my-5 Testimoniales
-        include ../layout/partials/testimoniales
+                        p.titulo Viaje a Canadá
+                        p.fecha del 20 al 31 de Julio del 2020
+                        p.precio $ 2,500 USD

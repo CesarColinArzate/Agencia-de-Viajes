@@ -1,25 +1,36 @@
-extends ../layout/index
+extends ../masterpage/index
+
 block contenido
     main.container.mt-5
         h1.text-center.mb-5 #{pagina}
         .row
             .col-md-12
-                include ../layout/partials/testimoniales
+                .row.testimoniales
+                    each testimonial in testimoniales
+                        .col-md-6.col-lg-4.mb-4
+                            .card
+                                .card-body
+                                    blockquote.blockquote
+                                        p.mb-0
+                                            | #{testimonial.mensaje}
+                                    blockquote.blockquote-footer
+                                        | #{testimonial.nombre}
             .col-md-12
-                h2.text-center Agrega un Testimonial
-                if (errores)
-                    each error in errores 
+                h2.text-center Agradeceremos tu testimonio
+                if(errores)
+                    each error in errores
                         .alert.alert-danger.text-center=error.mensaje
+
                 .row.justify-content-center
                     .col-md-8
                         form(action='/testimoniales', method='POST')
                             .form-group
-                                label(for="nombre") Nombre
-                                input(id="nombre", class="form-control", type="text", name="nombre", placeholder="Tu nombre", value=nombre)
+                                label(for='nombre') Nombre
+                                input(id='nombre', class='form-control', type='text', name='nombre', value=nombre)
                             .form-group
-                                label(for="correo") Correo electrónico
-                                input(id="correo", class="form-control", type="email", name="correo", placeholder="Tu correo electrónico", value=correo)
+                                label(for='correo') Correo Electrónico
+                                input(id='correo', class='form-control', type='email', name='correo' value=correo)
                             .form-group
-                                label(for="mensaje") Mensaje
-                                textarea(id="mensaje", class="form-control", name="mensaje", rows="3", placeholder="Tu mensaje")=   mensaje
-                            input.btn.btn-success.btn-block(type="submit", value="Guardar Testimonial")
+                                label(for='mensaje') Mensaje
+                                textarea(id='mensaje', class='form-control',name="mensaje", rows="5")=mensaje
+                            input(type='submit', class='btn btn-success btn-block', value='Guardar Testimonio')

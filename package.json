@@ -1,21 +1,29 @@
 {
   "name": "intronodejs",
   "version": "1.0.0",
-  "description": "Intro to Node JS",
+  "description": "Intro a Node JS con Express, Sequelize y Bootstrap",
   "main": "index.js",
   "scripts": {
-    "dev":"nodemon server",
+    "dev": "nodemon server",
     "start": "node server"
   },
-  "author": "CésarColín",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CesarColinArzate/Agencia-de-Viajes.git"
+  },
+  "author": "César Colín",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CesarColinArzate/Agencia-de-Viajes/issues"
+  },
+  "homepage": "https://github.com/CesarColinArzate/Agencia-de-Viajes#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mysql2": "^2.1.0",
-    "nodemon": "^2.0.3",
-    "pug": "^2.0.4",
-    "sequelize": "^5.21.7"
+    "nodemon": "^2.0.4",
+    "pug": "^3.0.0",
+    "sequelize": "^5.21.13"
   }
 }
